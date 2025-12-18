@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2020 InClass App</title>
+
+    <!-- Entry point: send users to the static site in /public -->
+    <meta http-equiv="refresh" content="0; url=public/index.html" />
+
+    <script>
+        // JS redirect as a fallback (some setups ignore meta refresh)
+        window.location.replace('public/index.html');
+    </script>
+</head>
+
+<body>
+    <p>
+        Redirecting… If you are not redirected, open
+        <a href="public/index.html">public/index.html</a>.
+    </p>
+</body>
+
+</html>

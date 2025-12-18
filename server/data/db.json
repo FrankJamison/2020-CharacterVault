@@ -1,0 +1,33 @@
+{
+  "nextIds": {
+    "user": 3,
+    "task": 1,
+    "character": 2
+  },
+  "users": [
+    {
+      "user_id": 1,
+      "username": "demo_user",
+      "email": "demo_user@example.com",
+      "password_hash": "$2a$10$8uXObD/27hG1rPwUpFqnFeSOpC7tqM93isCFavzHuDpPxXr8Ny792",
+      "refresh_tokens": [
+        "1941396b96a90e1c13136a019697b718f3bbe1bb623c4e2074ab7f5922eda8be",
+        "f2155b6da0dfd2b846582a3fac768a5be759ccfe09042ef0562711d971624142",
+        "4b79bc62e286aaea69a6026534b74cbd45be08366b9edc9ac86b363518f455f0"
+      ],
+      "created_date": "2025-12-18T16:04:31.411Z"
+    },
+    {
+      "user_id": 2,
+      "username": "frankjamison",
+      "email": "frank@frankjamison.com",
+      "password_hash": "$2a$10$HFAc67CwXXzV2vQAeb/H5ewAcMerFgLqBiEGrhMrhPJeESbvHLaDy",
+      "refresh_tokens": [
+        "67e9e7cc16632d6e2dbbdb8d1a2f6f40f3cae08e2fd7d7febd6102dddbf24507"
+      ],
+      "created_date": "2025-12-18T16:06:42.112Z"
+    }
+  ],
+  "tasks": [],
+  "characters": []
+}
