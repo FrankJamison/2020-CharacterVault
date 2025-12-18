@@ -2,6 +2,8 @@
 
 A small, full-stack JavaScript app that demonstrates **authentication + CRUD** in a clean, beginner-friendly way.
 
+Built as an in-class app for my **MSSE 661 Web Software Development** course at **Regis University**.
+
 After a user registers and logs in, they can:
 - Create and delete **RPG-style characters**
 - Create and delete **to-do tasks**
