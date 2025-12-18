@@ -1,4 +1,4 @@
-# 2020 In-Class App (Characters + Tasks)
+# 2020 Character Vault (Characters + Tasks)
 
 A small, full-stack JavaScript app that demonstrates **authentication + CRUD** in a clean, beginner-friendly way.
 
