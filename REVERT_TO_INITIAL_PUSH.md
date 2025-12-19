@@ -4,9 +4,15 @@ This guide explains how to revert your repository to the initial push state.
 
 ## Understanding Your Current State
 
-Your repository currently has:
-- **Initial push commit** (`e137d61`): Contains all your project files
-- **Current commit** (`c35b5e6`): An "Initial plan" commit that you want to remove
+Your repository may have:
+- **Initial push commit**: Contains your original project files
+- **Newer commits**: Additional commits you want to remove to return to the initial state
+
+To find your initial commit, use:
+```bash
+git log --reverse --oneline
+```
+The first commit shown is your initial push.
 
 ## Solution Options
 
@@ -16,13 +22,13 @@ This approach resets your branch to the initial push commit:
 
 ```bash
 # Navigate to your repository
-cd /path/to/2020-CharacterVault
+cd /path/to/your-repository
 
 # Reset to the initial push commit
-git reset --hard e137d61
+git reset --hard <initial-commit-sha>
 
 # Force push to update GitHub (WARNING: This rewrites history)
-git push --force origin copilot/revert-to-initial-push
+git push --force origin <your-branch-name>
 ```
 
 **Pros:**
@@ -39,13 +45,13 @@ This approach creates a new commit that undoes changes:
 
 ```bash
 # Navigate to your repository
-cd /path/to/2020-CharacterVault
+cd /path/to/your-repository
 
 # Create a revert commit
 git revert HEAD --no-edit
 
 # Push normally (no force needed)
-git push origin copilot/revert-to-initial-push
+git push origin <your-branch-name>
 ```
 
 **Pros:**
@@ -62,7 +68,7 @@ If you want to start fresh from the initial push:
 
 ```bash
 # Create a new branch from the initial commit
-git checkout -b clean-start e137d61
+git checkout -b clean-start <initial-commit-sha>
 
 # Push the new branch
 git push origin clean-start
