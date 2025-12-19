@@ -51,8 +51,9 @@ cd /path/to/your-repository
 git log --reverse --oneline
 # Copy the initial commit SHA (e.g., abc1234)
 
-# Revert all commits from the initial commit to HEAD
-# This creates revert commits for each commit in reverse order
+# Revert all commits after the initial commit back to the initial state
+# The --no-commit option stages all revert changes without creating individual commits
+# This allows you to review and commit all reverts together
 git revert --no-commit <initial-commit-sha>..HEAD
 git commit -m "Revert to initial push state"
 
