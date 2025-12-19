@@ -41,14 +41,20 @@ git push --force origin <your-branch-name>
 
 ### Option 2: Revert with a New Commit (Safer for Shared Branches)
 
-This approach creates a new commit that undoes changes:
+This approach creates new commits that undo changes back to the initial push:
 
 ```bash
 # Navigate to your repository
 cd /path/to/your-repository
 
-# Create a revert commit
-git revert HEAD --no-edit
+# Find your initial commit SHA
+git log --reverse --oneline
+# Copy the initial commit SHA (e.g., abc1234)
+
+# Revert all commits from the initial commit to HEAD
+# This creates revert commits for each commit in reverse order
+git revert --no-commit <initial-commit-sha>..HEAD
+git commit -m "Revert to initial push state"
 
 # Push normally (no force needed)
 git push origin <your-branch-name>
@@ -60,7 +66,8 @@ git push origin <your-branch-name>
 - No force push required
 
 **Cons:**
-- Keeps both commits in history
+- Keeps all commits in history (with revert commits on top)
+- More complex history
 
 ### Option 3: Create a New Branch from Initial Commit
 
